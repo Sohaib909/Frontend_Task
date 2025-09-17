@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import { mockProperties } from "./data/mockProperties"
 import { PropertyList } from "./components/PropertyList"
 import { PropertyDetails } from "./components/PropertyDetails"
+import { MapView } from "./components/MapView"
 import { Footer } from "./components/Footer"
 
 import "./App.css"
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PropertyList properties={mockProperties} />} />
           <Route path="/properties/:id" element={<PropertyDetails />} />
+          <Route path="/map" element={<MapView properties={mockProperties} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

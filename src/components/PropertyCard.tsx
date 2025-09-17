@@ -20,13 +20,13 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property, onClick })
 
   return (
     <div
-      className="bg-white rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer overflow-hidden"
+      className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-out cursor-pointer overflow-hidden transform-gpu will-change-transform hover:-translate-y-1 hover:scale-[1.02]"
       onClick={() => onClick(property)}
     >
       <img src={property.image || "/placeholder.svg"} alt={property.title} className="w-full h-48 object-cover" />
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">{property.title}</h3>
-        <p className="text-2xl font-bold text-blue-600 mb-2">{formatPrice(property.price)}</p>
+        <p className="text-2xl font-bold text-emerald-600 mb-2">{formatPrice(property.price)}</p>
         <div className="flex justify-between items-center text-sm text-gray-600">
           <span className="flex items-center">
             <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">

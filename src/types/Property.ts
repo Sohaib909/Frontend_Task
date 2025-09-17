@@ -5,6 +5,8 @@ export interface Property {
     bedrooms: number
     location: string
     image: string
+    lat: number
+    lng: number
   }
   
   export interface FilterState {

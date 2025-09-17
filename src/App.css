@@ -16,3 +16,14 @@
 .focus\:ring-blue-500:focus {
   --tw-ring-color: rgb(59 130 246 / 0.5);
 }
+
+/* Banner heading fade in/out animation */
+@keyframes fadePulse {
+  0%, 15% { opacity: 0; transform: translateY(6px); }
+  25%, 60% { opacity: 1; transform: translateY(0); }
+  80%, 100% { opacity: 0; transform: translateY(-6px); }
+}
+
+.animate-fade-pulse {
+  animation: fadePulse 6s ease-in-out infinite;
+}

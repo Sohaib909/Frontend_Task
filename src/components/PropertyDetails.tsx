@@ -3,6 +3,7 @@ import type React from "react"
 import { useMemo } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { mockProperties } from "../data/mockProperties"
+import { PriceChart } from "./PriceChart"
 
 export const PropertyDetails: React.FC = () => {
   const navigate = useNavigate()
@@ -80,6 +81,10 @@ export const PropertyDetails: React.FC = () => {
                 today to schedule a viewing.
               </p>
             </div>
+          </div>
+
+          <div className="mt-8">
+            <PriceChart property={property} />
           </div>
         </div>
       </div>
