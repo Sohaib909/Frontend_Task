@@ -34,6 +34,15 @@ Potential improvements if given more time:
 
 ## Submission guidelines
 
+
+ ## Include two or three lines about how long did it take you to complete the task:
+ 
+ It took almost 3 to 4 hours to complete this task
+ 
+  ## how satisfied you’re with your submissions on a scale of 0-10.
+
+  i would scale it 8/10.
+
 Please share the code in a GitHub repository (or as a ZIP).
 
  https://github.com/Sohaib909/Frontend_Task

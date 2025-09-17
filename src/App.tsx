@@ -1,9 +1,9 @@
 
 import { Routes, Route, Navigate } from "react-router-dom"
 import { mockProperties } from "./data/mockProperties"
-import { PropertyList } from "./components/PropertyList"
-import { PropertyDetails } from "./components/PropertyDetails"
-import { MapView } from "./components/MapView"
+import { HomePage } from "./pages/HomePage"
+import { PropertyDetailsPage } from "./pages/PropertyDetailsPage"
+import { MapPage } from "./pages/MapPage"
 import { Footer } from "./components/Footer"
 
 import "./App.css"
@@ -13,9 +13,9 @@ function App() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <div className="flex-1">
         <Routes>
-          <Route path="/" element={<PropertyList properties={mockProperties} />} />
-          <Route path="/properties/:id" element={<PropertyDetails />} />
-          <Route path="/map" element={<MapView properties={mockProperties} />} />
+          <Route path="/" element={<HomePage properties={mockProperties} />} />
+          <Route path="/properties/:id" element={<PropertyDetailsPage />} />
+          <Route path="/map" element={<MapPage properties={mockProperties} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
