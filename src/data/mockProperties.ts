@@ -1,0 +1,68 @@
+import type { Property } from "../types/Property"
+
+export const mockProperties: Property[] = [
+  {
+    id: 1,
+    title: "Modern Apartment in US",
+    price: 250000,
+    bedrooms: 2,
+    location: "Downtown",
+    image: "https://media.istockphoto.com/id/2155879454/photo/this-is-an-exterior-photo-of-a-home-for-sale-in-beverly-hills-ca.jpg?s=612x612&w=0&k=20&c=uSKacMQvmaYX5Pf5Br7pUfErYQbNt_UWXRTjfwrdSDQ=",
+  },
+  {
+    id: 2,
+    title: "Cozy Suburban Home",
+    price: 320000,
+    bedrooms: 3,
+    location: "Suburbs",
+    image: "https://media.istockphoto.com/id/2155879454/photo/this-is-an-exterior-photo-of-a-home-for-sale-in-beverly-hills-ca.jpg?s=612x612&w=0&k=20&c=uSKacMQvmaYX5Pf5Br7pUfErYQbNt_UWXRTjfwrdSDQ=",
+  },
+  {
+    id: 3,
+    title: "Luxury Penthouse Suite",
+    price: 850000,
+    bedrooms: 4,
+    location: "Downtown",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo1LbbV0eaHadvpxjY_GtXiA4vWXhprARdDw&s",
+  },
+  {
+    id: 4,
+    title: "Charming Studio Apartment",
+    price: 180000,
+    bedrooms: 1,
+    location: "Midtown",
+    image: "https://media.istockphoto.com/id/2155879454/photo/this-is-an-exterior-photo-of-a-home-for-sale-in-beverly-hills-ca.jpg?s=612x612&w=0&k=20&c=uSKacMQvmaYX5Pf5Br7pUfErYQbNt_UWXRTjfwrdSDQ=",
+  },
+  {
+    id: 5,
+    title: "Family Home with Garden",
+    price: 420000,
+    bedrooms: 4,
+    location: "Suburbs",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR-Jk-FA3wTAxosoJd9qrPIN8ynne500apSdw7z4d3vfZCQdzq1Pl90clCOrGjGBk&s&ec=73068120",
+  },
+  {
+    id: 6,
+    title: "Contemporary Loft",
+    price: 380000,
+    bedrooms: 2,
+    location: "Arts District",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzZyfuJpUgTyrydF8bDge_BvfxCQrIuY-8dCtONTIZ2xjpdxmTMgNfY4okCK-2w_8&s&ec=73068120",
+  },
+  {
+    id: 5,
+    title: "Family Home with Garden",
+    price: 450000,
+    bedrooms: 4,
+    location: "Suburbs",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB3xYSPWVbg4ukbFZuGFr0n6xC1SYySR1uIg&s",
+  },
+  {
+    id: 6,
+    title: "Contemporary Loft",
+    price: 480000,
+    bedrooms: 2,
+    location: "Arts District",
+    image: "https://media.istockphoto.com/id/2155879454/photo/this-is-an-exterior-photo-of-a-home-for-sale-in-beverly-hills-ca.jpg?s=612x612&w=0&k=20&c=uSKacMQvmaYX5Pf5Br7pUfErYQbNt_UWXRTjfwrdSDQ=",
+  },
+]

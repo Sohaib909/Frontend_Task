@@ -1,23 +1,25 @@
-import { useState } from 'react'
 
-import './App.css'
+import { Routes, Route, Navigate } from "react-router-dom"
+import { mockProperties } from "./data/mockProperties"
+import { PropertyList } from "./components/PropertyList"
+import { PropertyDetails } from "./components/PropertyDetails"
+import { Footer } from "./components/Footer"
+
+import "./App.css"
 
 function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="rounded-2xl bg-white p-8 shadow-lg">
-        <h1 className="text-3xl font-bold text-blue-600">
-          🚀 Tailwind + React + TypeScript is working!
-        </h1>
-        <p className="mt-4 text-gray-700">
-          If you can see this styled text, your setup is correct.
-        </p>
-        <button className="mt-6 rounded-lg bg-blue-500 px-4 py-2 text-white transition hover:bg-blue-600">
-          Test Button
-        </button>
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      <div className="flex-1">
+        <Routes>
+          <Route path="/" element={<PropertyList properties={mockProperties} />} />
+          <Route path="/properties/:id" element={<PropertyDetails />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </div>
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

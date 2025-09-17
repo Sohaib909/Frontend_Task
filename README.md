@@ -1,69 +1,43 @@
-# React + TypeScript + Vite
+# Real Estate Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + TypeScript single-page app built with Vite. It lists mock real estate properties, supports search/filters, and shows a details page for each property using React Router. Styles are done with Tailwind CSS.
 
-Currently, two official plugins are available:
+## How to run the project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Prerequisites:
+- Node.js 18 or newer
 
-## Expanding the ESLint configuration
+Steps:
+1. Install dependencies
+   - `npm install`
+2. Start the dev server
+   - `npm run dev`
+   - Open the printed URL in your browser
+3. Build for production
+   - `npm run build`
+4. Preview the production build locally
+   - `npm run preview`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Notes on approach and trade‑offs
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Kept a simple file structure under `src/` with small, focused components (`PropertyList`, `PropertyDetails`, `Footer`).
+- Used React Router for clean navigation between the list and detail pages.
+- Mock data lives in `src/data/mockProperties.ts` to keep the app self‑contained.
+- Tailwind utilities keep styles consistent and easy to tweak. Chose neutral colors to avoid an over‑designed feel.
+- Images are displayed responsibly to avoid stretching. Card images use object-cover; the detail view avoids unnecessary upscaling where possible.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Potential improvements if given more time:
+- Add pagination or infinite scrolling to the list view.
+- Extract a global layout with a header and route-based page titles.
+- Add unit tests for filtering logic and basic component rendering.
+- Replace mock data with a small API layer and proper data fetching.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Submission guidelines
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Please share the code in a GitHub repository (or as a ZIP).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+ https://github.com/Sohaib909/Frontend_Task
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+If anything is unclear or you need a different package manager command, let me know.
