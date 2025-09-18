@@ -32,7 +32,7 @@ Potential improvements if given more time:
 - Add unit tests for filtering logic and basic component rendering.
 - Replace mock data with a small API layer and proper data fetching.
 
-## Submission guidelines
+
 
 
  ## Include two or three lines about how long did it take you to complete the task:
